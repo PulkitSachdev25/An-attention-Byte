@@ -7,6 +7,42 @@ Original file is located at
     https://colab.research.google.com/drive/1rrFW07c-IGmeD-P4fHymfXLno3S40G3-
 """
 
+# =========================
+# INSTALLS
+# =========================
+!apt-get update -qq
+!apt-get install -y ffmpeg
+!pip install gradio moviepy ffmpeg-python pydub faster-whisper vaderSentiment opencv-python-headless
+
+# =========================
+# GRADIO APP
+# =========================
+import gradio as gr
+import os, cv2, ffmpeg, numpy as np
+from moviepy.editor import VideoFileClip, VideoClip, CompositeVideoClip, ColorClip
+from pydub import AudioSegment
+from pydub.utils import make_chunks
+from faster_whisper import WhisperModel
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+
+def process_video(video_file):
+    try:
+        os.makedirs("temp_output", exist_ok=True)
+        import shutil
+        shutil.copy(video_file, "input.mp4")
+        return "Saved video. Now processing…", []
+    except Exception as e:
+        return f"Error saving video: {e}", []
+# ---------------- GRADIO INTERFACE ----------------
+iface = gr.Interface(
+    fn=process_video,
+    inputs=gr.Video(label="Upload MP4"),
+    outputs=[gr.Textbox(label="Status"), gr.File(label="Download Reels")],
+    title="🎬 Reel-Worthy Clip Generator"
+)
+
+iface.launch(share=True)
+
 from moviepy.editor import VideoFileClip
 !pip install textblob
 !python -m textblob.download_corpora
