@@ -1,1 +1,58 @@
-# An-attention-Byte
+# An-Attention-Byte
+
+This is a program made by **Pulkit Sachdev** as a submission for the hackathon:  
+*"ByteSize Sage AI Hackathon: Master the Attention Economy with Gen AI"*.
+
+The program converts videos input by the user into **five short, reel-worthy clips** suitable for Instagram Reels or YouTube Shorts.
+
+---
+
+## Features
+
+- **Automatic Reel Extraction**: Selects the top 5 clips based on **audio peaks and sentiment**.  
+- **Vertical 9:16 Format**: Converts clips to vertical format for social media.  
+- **Full Subtitles**: Generates and overlays subtitles from the audio using **Whisper transcription**.  
+- **Sentiment-Based Ranking**: Prioritizes clips with the most engaging / positive content.  
+- **Frontend Demo**: Simple **Gradio interface** for uploading videos and downloading clips.
+
+---
+
+## Usage
+
+1. Open `app.py` in **Google Colab**.  
+2. Run all cells.  
+3. Upload a video (short videos recommended for demo).  
+4. The program will process the video and output **5 downloadable reels**.  
+5. For longer videos, processing can take **several minutes per clip**.
+
+> ⚠️ **Note:** Processing time depends heavily on the length of the input video and available GPU.  
+> - 1–2 min video → ~5–10 minutes total  
+> - 10–30 min video → can take 30–60+ minutes due to transcription and video rendering  
+
+---
+
+## Demo
+
+A **short demo** using a small test video can be run via the Gradio frontend:  
+[Insert your Gradio shareable link here]
+
+---
+
+## Technical Details
+
+- **Audio Processing**: `pydub` detects peaks and merges nearby segments.  
+- **Transcription**: `faster-whisper` generates accurate subtitles.  
+- **Sentiment Analysis**: `vaderSentiment` ranks clips by engagement potential.  
+- **Video Processing**: `moviepy` resizes, overlays subtitles, and converts clips to vertical format.  
+- **Frontend**: `Gradio` interface for easy video upload and download.
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/PulkitSachdev25/An-Attention-Byte.git
+cd An-Attention-Byte
+pip install -r requirements.txt
