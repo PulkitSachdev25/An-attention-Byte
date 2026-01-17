@@ -8,7 +8,7 @@ The program converts videos input by the user into **five short, reel-worthy cli
 ---
 test video used https://drive.google.com/file/d/15I4yGcQgx9YmZ3n5OTbnuw__a4JEOIX0/view?usp=drive_link
 test video outputs https://drive.google.com/drive/folders/15sFml_06F-FOa2TLAVukbpucjyNrbxMv?usp=drive_link
-a subtitled short video of the video you sent https://drive.google.com/file/d/1xJ7JBJvOIBZMtxg_UN_VBtptmSCACiQd/view?usp=drive_link
+a subtitled short clip of the video you sent https://drive.google.com/file/d/1xJ7JBJvOIBZMtxg_UN_VBtptmSCACiQd/view?usp=drive_link
 screen recording of program https://drive.google.com/file/d/1tECz5zPFu_S1MSJ-NszjcVSZUnwEVyWJ/view?usp=drive_link
 
 
