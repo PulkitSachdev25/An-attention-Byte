@@ -27,7 +27,8 @@ The program converts videos input by the user into **five short, reel-worthy cli
 
 > ⚠️ **Note:** Processing time depends heavily on the length of the input video and available GPU.  
 > - 1–2 min video → ~5–10 minutes total  
-> - 10–30 min video → can take 30–60+ minutes due to transcription and video rendering  
+> - 10–30 min video → can take 30–60+ minutes due to transcription and video rendering
+> - “The pipeline works for any video. For demonstration purposes, we’re showing reels generated from a short segment due to time and resource constraints.”
 
 ---
 
